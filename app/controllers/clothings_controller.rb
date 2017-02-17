@@ -8,16 +8,16 @@ class ClothingsController < ApplicationController
 
   def show
     @clothing = Clothing.find(params[:id])
-    if params[:upvote]
-      @answer = Answer.find(params[:upvote])
-      @answer.liked_by current_user
-      render :show
-    end
-    if params[:downvote]
-      @answer = Answer.find(params[:downvote])
-      @answer.disliked_by current_user
-      render :show
-    end
+    # if params[:upvote]
+    #   @answer = Answer.find(params[:upvote])
+    #   @answer.liked_by current_user
+    #   render :show
+    # end
+    # if params[:downvote]
+    #   @answer = Answer.find(params[:downvote])
+    #   @answer.disliked_by current_user
+    #   render :show
+    # end
   end
 
   def new

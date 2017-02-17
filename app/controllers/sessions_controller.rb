@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
       #THIS IS THE MOST IMPORTANT PART. Actually log the user in by storing their ID in the session hash with the [:user_id] key!
       session[:user_id] = @user.id
       #then redirect them to the homepage
-      redirect_to outfits_path
+      redirect_to root_path
     else
       #whoops, either the user wasn't in the database or their password is incorrect, so let them know, then redirect them back to the log in page
       flash[:alert] = "There was a problem logging you in."
