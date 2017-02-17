@@ -8,5 +8,5 @@
 
 
 user = User.create(first_name: 'user', last_name: 'user', email: 'user@email.com', password: 'p', password_confirmation: 'p', admin: 'false')
-non = User.create(first_name: 'non', last_name: 'non', email: 'non@email.com', password: 'p', password_confirmation: 'p')
 josh = User.create(first_name: 'josh', last_name: 'josh', email: 'admin@email.com', password: 'p', password_confirmation: 'p', admin: 'true')
+non = User.create(first_name: 'non', last_name: 'non', email: 'non@email.com', password: 'p', password_confirmation: 'p')
