@@ -1,15 +1,20 @@
 <h1>Welcome</h1>
+<%= link_to "Add New Product", new_clothing_path %>
 
 <h3>Clothing</h3>
 
-<div class="well">
+<div class="well-white">
 
 <% if @clothings.any? %>
 <% @clothings.each do |clothing| %>
- <li>
-   <span class="clothing-text"><%= link_to clothing.name, clothing_path(clothing) %></span> created by
-   <%= clothing.user.first_name %> <%= clothing.user.last_name %>
- </li>
+
+   <div class="image-box well">
+     <%= link_to image_tag(clothing.image.url, :class => "image-size"), clothing_path(clothing) %>
+     <span class="clothing-text "><%= link_to clothing.name, clothing_path(clothing) %></span><br>
+     <span class="body-text ">Uploaded by <%= clothing.user.first_name %> <%= clothing.user.last_name %></span><br>
+     <span class="body-text "><%= time_ago_in_words(clothing.created_at, :class => "time_ago" ) %> ago</span>
+   </div>
+
  <% end %>
  <% else %>
 <p>
@@ -18,7 +23,4 @@
 <% end %>
 </div>
 <br>
-<div class ="bar">
-</div>
-<br>
-<%= link_to "New clothing", new_clothing_path %>
+<div class ="bar"></div>

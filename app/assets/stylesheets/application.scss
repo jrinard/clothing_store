@@ -73,6 +73,10 @@ a:link {
   font-size: 1.5em;
   margin: 0px 15px;
 }
+.body-text {
+  margin: 0px 15px;
+}
+
 
 .vote-number {
   font-size: 1.5em;
@@ -89,4 +93,27 @@ a:link {
 
 .image-box {
   width: 300px;
+}
+
+.image-box-detail {
+  width: 300px;
+  display: block;
+  margin:auto;
+}
+
+.well-dark {
+  background-color: #222;
+  padding: 25px;
+  border-radius: 5px;
+}
+
+.well-white {
+  background-color: #222;
+  padding: 25px;
+  border-radius: 5px;
+}
+
+.detail-text-group {
+  margin-left: 300px;
+
 }
