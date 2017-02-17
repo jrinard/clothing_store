@@ -7,7 +7,7 @@
 <% if @clothings.any? %>
 <% @clothings.each do |clothing| %>
  <li>
-   <span class="clothing-text"><%= link_to clothing.name, clothing_path(clothing) %></span> asked by
+   <span class="clothing-text"><%= link_to clothing.name, clothing_path(clothing) %></span> created by
    <%= clothing.user.first_name %> <%= clothing.user.last_name %>
  </li>
  <% end %>
