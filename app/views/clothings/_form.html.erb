@@ -1,0 +1,9 @@
+<%= form_for @clothing do |f| %>
+  <%= f.label :name,'Name' %>
+  <%= f.text_field :name, :class => 'form-control', :placeholder => "Name"  %><br>
+  <%= f.label :details,'Details' %>
+  <%= f.text_field :details, :class => 'form-control', :placeholder => "Details"  %><br>
+  <%= f.label :price,'Price' %>
+  <%= f.text_field :price, :class => 'form-control', :placeholder => "Price"  %><br>
+  <%= f.submit %>
+<% end %>

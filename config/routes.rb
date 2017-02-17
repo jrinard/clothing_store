@@ -6,8 +6,8 @@ get "/log-out" => "sessions#destroy", as: :log_out #custom path
 
 resources :users
 
-resources :outfits do
-  # resources :comment
+resources :clothings do
+  # resources :comments
 end
 
 end

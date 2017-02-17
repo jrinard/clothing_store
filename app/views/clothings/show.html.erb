@@ -1,0 +1,6 @@
+<h1><%= @clothing.name %></h1><br>
+
+
+<hr>
+<%= link_to "Edit Clothing", edit_clothing_path %> |
+<%= link_to "Delete Clothing",  clothing_path(@clothing),  :data => {:confirm => "Are you sure?",:method => "delete"} %> |
