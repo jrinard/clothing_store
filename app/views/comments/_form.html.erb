@@ -1,7 +1,5 @@
-
-
 <%= form_for [@user, @clothing, @comment] do |f| %>
   <%= f.label :content %>
-  <%= f.text_field :content %>
-  <p><%= f.submit %></p>
+  <%= f.text_field :content, :class => "form-control", :placeholder => "Content" %><br>
+  <%= f.submit 'Save', :class => 'btn btn-warning' %>
 <% end %>

@@ -32,6 +32,7 @@ a {
   color: #F5B041;
   font-size: 1.2em;
   padding: 8px;
+  text-decoration: none;
 }
 
 .navbar a:hover {
@@ -41,18 +42,21 @@ a {
   padding: 19px 8px;
   font-weight: bolder;
   border-radius: 10px 10px 0px 0px;
+  text-decoration: none;
 }
 
 .navbar a:visited {
   color: #fff;
   font-size: 1.2em;
   padding: 8px;
+  text-decoration: none;
 }
 .navbar a:active {
   color: #F5B041 !important;
   background-color: #fff;
   font-size: 1.2em;
   padding: 19px 8px;
+  text-decoration: none;
 }
 
 nav {
@@ -74,10 +78,12 @@ nav {
 a:active {
   color: #000;
   font-size: 1.5em;
+  text-decoration: none;
 }
 a:visited {
   color: #000;
   font-size: 1.5em;
+  text-decoration: none;
 }
 a:hover {
   color: #F5B041;

@@ -7,6 +7,6 @@
   <%= f.label :price,'Price' %>
   <%= f.text_field :price, :class => 'form-control', :placeholder => "Price"  %><br>
   <%= f.label :image,'Image' %>
-  <%= f.file_field :image %>
-  <%= f.submit %>
+  <%= f.file_field :image %><br>
+  <%= f.submit 'Save', :class => 'btn btn-warning' %>
 <% end %>
