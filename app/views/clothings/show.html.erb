@@ -17,7 +17,9 @@
   </div>
 
 </div>
-      <span class="yellow"><h3>Comments</h3></span><%= link_to "Add Comment", new_clothing_comment_path(@clothing) %><br><br>
+      <div class="btn btn-warning pull-right"><%= link_to "Add Comment", new_clothing_comment_path(@clothing) %></div>
+      <span class="yellow"><h3>Comments</h3></span>
+      <br><br>
 <% if @clothing.comments.any? %> <!-- Finds all comments -->
 
   <ul>

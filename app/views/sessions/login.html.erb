@@ -1,11 +1,23 @@
+<div class="header">
+  <%= image_tag "red.jpg", :class => "banner" %>
+</div>
+
+
+<div class="home-text pull-left">
+
 <h1>Home</h1>
 <div class ="bar"></div><br>
-
 <p>Welcome to the world famous clothing store. Here you will find a wide variety of clothing options from casual jackets to sophisticated watches for all your fashion needs.</p>
 
+  <%= image_tag "watch.jpg", :class => "thumbs" %>
+  <%= image_tag "sleep_glasses.jpg", :class => "thumbs" %>
+  <%= image_tag "jacket.jpg", :class => "thumbs" %>
+<br><br><br>
+
+</div>
 <br>
 
-<div class="login form-width">
+<div class="pull-right">
 <div class="well">
 <h1>Login</h1><br>
 <%=form_tag log_in_path do%>
@@ -19,7 +31,8 @@
 AFTER SEED <br>
 ADMIN - User: admin@email.com - Password: p <br>
 USER - User: admin@email.com - Password: p
-</div>
+
 <h1>or</h1>
 <%= link_to "Sign Up", new_user_path, :class => "btn btn-warning" %>
+</div>
 </div>
