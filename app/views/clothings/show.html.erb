@@ -1,35 +1,40 @@
 
-<%= link_to "Edit Clothing", edit_clothing_path %> |
-<%= link_to "Delete Clothing",  clothing_path(@clothing),  :data => {:confirm => "Are you sure?",:method => "delete"} %> |
-<br><br>
-
-
 
 <div class="well">
+
+<% if current_user.admin? %>
+  <div class="pull-right">
+    <%= link_to "Edit Clothing", edit_clothing_path %> |
+    <%= link_to "Delete Clothing",  clothing_path(@clothing),  :data => {:confirm => "Are you sure?",:method => "delete"} %>
+  </div>
+<% end %>
+
   <div class="image-box-detail">
-      <%= image_tag @clothing.image.url, :class => "image-size" %>
-
-
+    <%= image_tag @clothing.image.url, :class => "image-size" %>
     <h1><%= @clothing.name %></h1><br>
     <h4>Details: <%= @clothing.details %></h4>
     <h4>Price: <%= @clothing.price %></h4>
   </div>
 
-
 </div>
-
+      <span class="yellow"><h3>Comments</h3></span><%= link_to "Add Comment", new_clothing_comment_path(@clothing) %><br><br>
 <% if @clothing.comments.any? %> <!-- Finds all comments -->
-      <h3>Comments</h3><%= link_to "Add Comment", new_clothing_comment_path(@clothing) %>
+
   <ul>
     <% @clothing.comments.each do |comment| %> <!-- Loop displays all comments -->
       <li>
         <div class="well">
-        <span class="clothing-text"><%= comment.content %></span><%= link_to "New Comment", new_clothing_comment_path(@clothing) %>
+        <span class="clothing-text"><%= comment.content %></span><br>
         <span class="body-text ">comment by <%= comment.user.first_name %> <%= comment.user.last_name %></span>
         <div class="pull-right">
 
-        <%= link_to "Edit", edit_clothing_comment_path(@clothing, comment) %> |
-        <%= link_to "Delete", clothing_comment_path(@clothing, comment),:data => {:confirm => "Are you sure?",:method => "delete"} %>
+        <% if current_user === comment.user || current_user.admin? %>
+          <%= link_to "Edit", edit_clothing_comment_path(@clothing, comment) %>
+        <% end %>
+
+        <% if current_user.admin? %>
+        | <%= link_to "Delete", clothing_comment_path(@clothing, comment),:data => {:confirm => "Are you sure?",:method => "delete"} %>
+        <% end %>
         </div>
       </li>
       <br>
