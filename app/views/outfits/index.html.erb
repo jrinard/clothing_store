@@ -1,0 +1,24 @@
+<h1>Welcome</h1>
+
+<h3>outfits</h3>
+
+<div class="well">
+
+<% if @outfits.any? %>
+<% @outfits.each do |outfit| %>
+ <li>
+   <span class="outfit-text"><%= link_to outfit.query, outfit_path(outfit) %></span> asked by
+   <%= outfit.user.first_name %> <%= outfit.user.last_name %>
+ </li>
+ <% end %>
+ <% else %>
+<p>
+  There are no outfits
+</p>
+<% end %>
+</div>
+<br>
+<div class ="bar">
+</div>
+<br>
+<%= link_to "New outfit", new_outfit_path %>

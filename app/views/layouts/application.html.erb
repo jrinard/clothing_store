@@ -9,6 +9,27 @@
   </head>
 
   <body>
-    <%= yield %>
-  </body>
+    <nav class = "nav navbar navbar-inverse shift">
+      Clothing Store |
+      <%= link_to "Outfits", outfits_path %> |
+        <div class="pull-right shift">
+
+        <% if current_user %>
+          <%= current_user.email %></li>
+           <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span> <%= link_to "Log-out", log_out_path, method: "get" %>
+        <% else %>
+           <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+          <%= link_to "Log-in", log_in_path %></a> |
+           <%= link_to "Signup", new_user_path %></a>
+        <% end %>
+      </div>
+    </nav>
+      <div class="container">
+        <div class="alert-warning">
+        <%= flash[:alert] %>
+        <%= flash[:notice] %>
+      </div>
+        <%= yield %>
+    </div>
+</body>
 </html>
