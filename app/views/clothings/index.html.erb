@@ -1,14 +1,9 @@
-
 <% if current_user.admin? %>
   <h1 class="btn btn-warning pull-right shift-down"><%= link_to "Add New Product", new_clothing_path %></h1>
 <% end %>
 <h1>View All Products</h1>
-
-
-  <div class="well-dark">
-
+<div class="well-dark">
   <% if @clothings.any? %>
-
     <% @clothings.each do |clothing| %>
       <div class="col-sm-4">
         <div class="well-home">
@@ -18,15 +13,9 @@
           <span class="body-text"><%= time_ago_in_words(clothing.created_at, :class => "time_ago" ) %> ago</span>
         </div>
       </div>
-      <% end %>
-      <% else %>
+    <% end %>
+    <% else %>
       <p>There are no clothings</p>
     <% end %>
-</div>
-
-
-<br>
+</div><br>
 <div class ="bar"></div>
-
-<span class="body-text">
-  </span>

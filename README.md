@@ -1,24 +1,37 @@
-# README
+### Clothing Store App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app demonstrates user authentication and admin roles in a clothing store.
+This app allows the user to view clothing items and clothing details.
+As a user you can add comments to different clothing.
 
-Things you may want to cover:
+As an admin you can add, edit, delete clothing.
 
-* Ruby version
+* Ruby version - 2.3.1
 
-* System dependencies
+### Database Setup
 
-* Configuration
+ * `postgres` in Terminal
+ * `rails db:create`
+ * `rails db:migrate`
 
-* Database creation
+### Run Ap
+* `bundle install`
+* `rails s`
+* Visit localhost:3000 in browser
 
-* Database initialization
+### Run Tests
 
-* How to run the test suite
+* `rspec` in terminal
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+### Support and Contact Details
 
-* ...
+* Github for Joshua Rinard: https://github.com/jrinard
+
+* Email: jrinard@hotmail.com
+
+### License
+
+MIT
+
+Copyright (c) 2017 Joshua Rinard
