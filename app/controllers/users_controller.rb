@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   skip_before_filter :require_login  #this is the exception to the rule
 
   def login
+    
   end
 
   def signup

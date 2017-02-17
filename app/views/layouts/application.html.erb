@@ -10,14 +10,15 @@
 
   <body>
     <nav class = "nav navbar navbar-inverse ">
-      <a href src="/"><span class="brand">Clothing Store</span> </a>
+      <a href="/"><span class="brand">Clothing Store</span> </a>
       <%= link_to "Clothing", clothings_path %>
 
 
         <div class="pull-right shift-login">
         <% if current_user %>
-          <span class="white"><%= current_user.email %></span>
-           <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> <%= link_to "Log-out", log_out_path, method: "get" %>
+        <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>
+          <span class="white"><%= current_user.email %></span> |
+            <%= link_to "Log-out", log_out_path, method: "get" %>
         <% else %>
            <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
           <%= link_to "Log-in", log_in_path %></a> |

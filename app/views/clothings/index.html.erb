@@ -1,5 +1,7 @@
-<h1>Welcome <div class="btn btn-warning pull-right"><%= link_to "Add New Product", new_clothing_path %></div></h1>
-
+<h1>View All Products
+<% if current_user.admin? %>
+  <div class="btn btn-warning pull-right"><%= link_to "Add New Product", new_clothing_path %></div></h1>
+<% end %>
 
 <div class="well-white">
 
@@ -8,9 +10,9 @@
 
    <div class="image-box well">
      <%= link_to image_tag(clothing.image.url, :class => "image-size"), clothing_path(clothing) %>
-     <span class="clothing-text "><%= link_to clothing.name, clothing_path(clothing) %></span><br>
-     <span class="body-text ">Uploaded by <%= clothing.user.first_name %> <%= clothing.user.last_name %></span><br>
-     <span class="body-text "><%= time_ago_in_words(clothing.created_at, :class => "time_ago" ) %> ago</span>
+     <span class="clothing-text"><%= link_to clothing.name, clothing_path(clothing) %></span><br>
+     <span class="body-text">Uploaded by <%= clothing.user.first_name %> <%= clothing.user.last_name %></span><br>
+     <span class="body-text"><%= time_ago_in_words(clothing.created_at, :class => "time_ago" ) %> ago</span>
    </div>
 
  <% end %>
