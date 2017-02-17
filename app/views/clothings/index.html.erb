@@ -1,26 +1,32 @@
-<h1>View All Products
+
 <% if current_user.admin? %>
-  <div class="btn btn-warning pull-right"><%= link_to "Add New Product", new_clothing_path %></div></h1>
+  <h1 class="btn btn-warning pull-right shift-down"><%= link_to "Add New Product", new_clothing_path %></h1>
 <% end %>
+<h1>View All Products</h1>
 
-<div class="well-white">
 
-<% if @clothings.any? %>
-<% @clothings.each do |clothing| %>
+  <div class="well-dark">
 
-   <div class="image-box well">
-     <%= link_to image_tag(clothing.image.url, :class => "image-size"), clothing_path(clothing) %>
-     <span class="clothing-text"><%= link_to clothing.name, clothing_path(clothing) %></span><br>
-     <span class="body-text">Uploaded by <%= clothing.user.first_name %> <%= clothing.user.last_name %></span><br>
-     <span class="body-text"><%= time_ago_in_words(clothing.created_at, :class => "time_ago" ) %> ago</span>
-   </div>
+  <% if @clothings.any? %>
 
- <% end %>
- <% else %>
-<p>
-  There are no clothings
-</p>
-<% end %>
+    <% @clothings.each do |clothing| %>
+      <div class="col-sm-4">
+        <div class="well-home">
+          <%= link_to image_tag(clothing.image.url, :class => "image-size"), clothing_path(clothing) %>
+          <span class="clothing-title"> <%= link_to clothing.name, clothing_path(clothing, :class => "clothing-text")  %></span><br>
+          <span class="body-text"> Uploaded by <%= clothing.user.first_name %> <%= clothing.user.last_name %><br></span>
+          <span class="body-text"><%= time_ago_in_words(clothing.created_at, :class => "time_ago" ) %> ago</span>
+        </div>
+      </div>
+      <% end %>
+      <% else %>
+      <p>There are no clothings</p>
+    <% end %>
 </div>
+
+
 <br>
 <div class ="bar"></div>
+
+<span class="body-text">
+  </span>

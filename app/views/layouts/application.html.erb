@@ -29,13 +29,17 @@
 
 
       <div class="container">
-        <div class="alert-warning">
-        <%= flash[:alert] %>
-        <%= flash[:notice] %>
-      </div>
-        <%= yield %>
-    </div>
 
+
+
+        <div class="alert-warning">
+          <%= flash[:alert] %>
+          <%= flash[:notice] %>
+        </div>
+          <div class="row">
+        <%= yield %>
+        </div>
+    </div>
     <footer>
       Copyright 2017 Joshua Rinard
     </footer>

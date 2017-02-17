@@ -21,6 +21,10 @@ a {
   text-decoration: none;
 }
 
+.container {
+  width: 95%;
+}
+
 .navbar{
   background-color: #333 !important;
   color: #F5B041;
@@ -114,7 +118,11 @@ a:hover img {
   height: 5px;
   background-color: #F5B041;
 }
-
+.clothing-title {
+  font-size: 1.5em;
+  margin: 0px 15px;
+  font-size: 2em;
+}
 .clothing-text {
   font-size: 1.5em;
   margin: 0px 15px;
@@ -145,11 +153,20 @@ a:hover img {
   display: block;
   margin:auto;
 }
+.well-home {
+  min-height: 460px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 5px;
+  padding: 15px;
+  margin: 10px;
+}
 
 .well-dark {
   background-color: #222;
   padding: 25px;
   border-radius: 5px;
+  overflow:hidden
 }
 
 .well-white {
