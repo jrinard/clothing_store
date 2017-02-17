@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Outfit</title>
+    <title>Clothing Store</title>
     <%= csrf_meta_tags %>
-
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <nav class = "nav navbar navbar-inverse shift">
-      Clothing Store |
-      <%= link_to "Outfits", clothings_path %> |
-        <div class="pull-right shift">
+    <nav class = "nav navbar navbar-inverse ">
+      <a href src="/"><span class="brand">Clothing Store</span> </a>
+      <%= link_to "Clothing", clothings_path %>
 
+
+        <div class="pull-right shift-login">
         <% if current_user %>
-          <%= current_user.email %></li>
-           <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span> <%= link_to "Log-out", log_out_path, method: "get" %>
+          <span class="white"><%= current_user.email %></span>
+           <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> <%= link_to "Log-out", log_out_path, method: "get" %>
         <% else %>
-           <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+           <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
           <%= link_to "Log-in", log_in_path %></a> |
            <%= link_to "Signup", new_user_path %></a>
         <% end %>
       </div>
     </nav>
+
+
       <div class="container">
         <div class="alert-warning">
         <%= flash[:alert] %>

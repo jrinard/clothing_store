@@ -1,5 +1,17 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+.brand {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    padding: 15px;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+}
 
 li {
   list-style-type: none;
@@ -13,26 +25,34 @@ a {
   background-color: #333 !important;
   color: #F5B041;
   border: none;
+  padding-bottom: 13px;
 }
 
 .navbar a:link {
-  color: #fff;
-  font-size: 1em;
+  color: #F5B041;
+  font-size: 1.2em;
+  padding: 8px;
 }
 
 .navbar a:hover {
-  color: #fff;
-  background-color: #000;
-  font-size: 1em;
+  color: #000 !important;
+  background-color: #fff;
+  font-size: 1.2em;
+  padding: 19px 8px;
+  font-weight: bolder;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .navbar a:visited {
   color: #fff;
-  font-size: 1em;
+  font-size: 1.2em;
+  padding: 8px;
 }
 .navbar a:active {
-  color: #fff;
-  font-size: 1em;
+  color: #F5B041 !important;
+  background-color: #fff;
+  font-size: 1.2em;
+  padding: 19px 8px;
 }
 
 nav {
@@ -43,6 +63,13 @@ nav {
   padding-right: 15px;
   padding-left: 15px;
 }
+
+.shift-login {
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 18px;
+}
+
 
 a:active {
   color: #000;
@@ -61,6 +88,15 @@ a:hover {
 a:link {
  color: #000;
  font-size: 1em;
+}
+
+a:hover img {
+  border: 10px solid #fff;
+  -webkit-box-shadow: 0px 1px 2px #222;
+}
+.btn a:hover {
+  color: #fff;
+  text-decoration: none;
 }
 
 .bar {
@@ -118,4 +154,13 @@ a:link {
 
 .yellow {
   color: #F5B041;
+}
+.white {
+  color: #fff;
+}
+
+.form-width {
+  width: 400px;
+  display: block;
+  margin: auto;
 }

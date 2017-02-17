@@ -1,7 +1,13 @@
 <h1>Home</h1>
 
-<h1>Login</h1>
+
+<div class ="bar"></div><br>
+
+
+<div class="login form-width">
+
 <div class="well">
+<h1>Login</h1>
 <%=form_tag log_in_path do%>
 <%=label_tag :email %>
 <%=text_field_tag :email %><br>
@@ -9,5 +15,12 @@
 <%=password_field_tag :password %><br>
 <%=submit_tag "Login", :class => "btn btn-warning"  %>
 <%end%>
+
+<hr>
+AFTER SEED <br>
+ADMIN - User: admin@email.com - Password: p <br>
+USER - User: admin@email.com - Password: p
 </div>
+<h1>or</h1>
 <%= link_to "Sign Up", new_user_path, :class => "btn btn-warning" %>
+</div>
