@@ -5,5 +5,7 @@
   <%= f.text_field :details, :class => 'form-control', :placeholder => "Details"  %><br>
   <%= f.label :price,'Price' %>
   <%= f.text_field :price, :class => 'form-control', :placeholder => "Price"  %><br>
+  <%= f.label :image,'Image' %>
+  <%= f.file_field :image %>
   <%= f.submit %>
 <% end %>

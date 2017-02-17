@@ -3,6 +3,10 @@
   <h1>Name: <%= @clothing.name %></h1><br>
   <h5>Details: <%= @clothing.details %></h5>
   <h5>Price: <%= @clothing.price %></h5>
+  <div class="image-box">
+      <%= image_tag @clothing.image.url, :class => "image-size" %>
+  </div>
+
 </div>
 
 <% if @clothing.comments.any? %> <!-- Finds all comments -->
